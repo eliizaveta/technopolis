@@ -18,10 +18,20 @@ public class Tests extends BaseTest{
     @Test
    public void Test() throws InterruptedException  {
 
-        UserPage userPage = new LoginPage(driver).doLogin(username, password);
-        Thread.sleep(500);
-        MessagePage msgPage = new MsgTest(driver).testMSG();
-        Thread.sleep(500);
+        boolean flag = true;
+        try {
+            UserPage userPage = new LoginPage(driver).doLogin(username, password);
+            Thread.sleep(500);
+            MessagePage msgPage = new MsgTest(driver).testMSG();
+            Thread.sleep(500);
+        }catch (Exception ex)
+        {
+            flag = false;
+        }
+        finally {
+            if(flag) System.out.println("Test completed successfully");
+            else System.out.println("test completed with error");
+        }
    }
 
 
