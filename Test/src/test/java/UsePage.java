@@ -6,10 +6,6 @@ class UserPage {
 
     UserPage(WebDriver driver) {
         this.driver = driver;
-        check();
     }
 
-    protected void check() {
-
-    }
 }

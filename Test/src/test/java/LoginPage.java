@@ -1,7 +1,5 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage {
 
@@ -12,12 +10,8 @@ public class LoginPage {
 
     LoginPage(WebDriver driver) {
         this.driver = driver;
-        check();
     }
 
-    protected void check() {
-
-    }
 
     public UserPage doLogin(String username, String password) throws InterruptedException
     {
