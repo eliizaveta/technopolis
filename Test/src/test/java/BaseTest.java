@@ -1,6 +1,7 @@
-import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 
@@ -13,6 +14,8 @@ public class BaseTest {
     public void driverInit() {
         System.setProperty("webdriver.chrome.driver", "C:/configs/chromedriver.exe");
         driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
     }
 
     public void get() {

@@ -3,8 +3,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 
-
-public class Tests extends BaseTest{
+public class Tests extends BaseTest {
 
     String username = "";
     String password = "";
@@ -16,6 +15,12 @@ public class Tests extends BaseTest{
     }
 
     @Test
+<<<<<<< HEAD
+    public void Test() {
+        UserPage userPage = new LoginPage(driver).doLogin(username, password);
+        MessagePage msgPage = new MsgTest(driver).testMSG();
+    }
+=======
    public void Test() throws InterruptedException  {
 
         boolean flag = true;
@@ -33,10 +38,11 @@ public class Tests extends BaseTest{
             else System.out.println("test completed with error");
         }
    }
+>>>>>>> 75a53b6062640e7266a3bdb27a706f955eb7b986
 
 
     @After
-    public void stop(){
+    public void stop() {
         driverDown();
     }
 }

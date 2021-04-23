@@ -8,12 +8,14 @@ public class MsgTest {
         this.driver = driver;
     }
 
-    public MessagePage testMSG() throws InterruptedException{
+    public MessagePage testMSG() {
         MessagePage newPage = new MessagePage(driver);
         newPage.goToMSG();
         newPage.createEmptyChat();
         newPage.sendSticker();
+        //check
         newPage.deleteMSG();
+        //check
         newPage.deleteChat();
         return newPage;
     }
