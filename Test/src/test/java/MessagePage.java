@@ -21,6 +21,7 @@ public class MessagePage {
     private final String CHAT_INFO_BUTTON = "msg-button[data-tsid='chat_info_button']";
     private final String LEAVE_CHAT_BUTTON = "msg-tico[data-tsid='leave-chat-btn']";
     private final String ROOT_ID = "msg_layer";
+    private final String TEMP_MSG = "msg-message[class='__removed']";
 
     MessagePage(WebDriver driver) {
         this.driver = driver;
