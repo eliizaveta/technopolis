@@ -25,6 +25,25 @@ public class MessagePage {
     MessagePage(WebDriver driver) {
         this.driver = driver;
     }
+    
+    public void checkMSGsent() {
+        Assert.assertFalse("Message wasn't sent", isMSGhere());
+        System.out.println("Message sent successfully");
+    }
+    public void checkMSGdeleted() {
+        Assert.assertTrue("Message wasn't deleted", isMSGhere());
+        System.out.println("Message deleted successfully");
+    }
+
+   private boolean isMSGhere(){
+        WebElement shadowDom = findShadowDomRoot();
+        try{
+            shadowDom.findElement(By.cssSelector(TEMP_MSG));
+            return true;
+        }catch (Exception e) {
+            return false;
+        }
+    }
 
     public void goToMSG() {
         driver.findElement(By.xpath(MSG_LOCATOR)).click();
