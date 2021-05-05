@@ -13,9 +13,9 @@ public class MsgTest {
         newPage.goToMSG();
         newPage.createEmptyChat();
         newPage.sendSticker();
-        //check
+        newPage.checkMSGsent();
         newPage.deleteMSG();
-        //check
+        newPage.checkMSGdeleted();
         newPage.deleteChat();
         return newPage;
     }
